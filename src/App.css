@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+nav {
+  font-size: 2em;
+  display: flex;
+  gap: 25em;
+  margin: 2em;
+}
+nav button {
+  width: 10em;
+}
+
+form {
+  width: 60em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.summary-input {
+  height: 3em;
+  width: 45em;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.output-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  width: 25em;
+}
+
+.output-basic-info {
+  padding: 1em;
+  height: 5em;
+  background-color: rgb(236, 182, 165);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.output-other-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em 2em 0 2em;
+  height: 30em;
+  background-color: rgb(240, 240, 240);
+}
+
+.basic-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.output-edu-work-container {
+  height: 5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.output-about {
+  height: 4em;
+}

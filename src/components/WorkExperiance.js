@@ -7,12 +7,11 @@ export default class WorkExperiance extends Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
 
     this.state = {
-      showComponent: false,
+      showComponent: true,
     };
   }
 
   handleOnChange(event) {
-    console.log(event);
     this.props.lift(event.target.name, event.target.value);
   }
 
@@ -31,10 +30,13 @@ export default class WorkExperiance extends Component {
       <div>
         <div></div>
         <h1>Work Experiance</h1>
-        <button onClick={this.handleButtonClick}>ADD</button>
+        <button onClick={this.handleButtonClick}>REMOVE</button>
         {this.state.showComponent ? (
           <div>
-            <WorkExperianceInput lift={this.handleOnChange} />
+            <WorkExperianceInput
+              lift={this.handleOnChange}
+              app={this.props.app}
+            />
           </div>
         ) : null}
       </div>

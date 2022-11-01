@@ -16,6 +16,8 @@ export default class Summary extends Component {
         <h1>Summary</h1>
         <form>
           <input
+            className="summary-input"
+            value={this.props.app.Summary.text}
             name="Summary text"
             placeholder="Write your summary here"
             onChange={this.handleOnChange}

@@ -8,12 +8,11 @@ export default class Education extends Component {
     this.handleButtonClick = this.handleButtonClick.bind(this);
 
     this.state = {
-      showComponent: false,
+      showComponent: true,
     };
   }
 
   handleOnChange(event) {
-    console.log(event);
     this.props.lift(event.target.name, event.target.value);
   }
 
@@ -32,10 +31,10 @@ export default class Education extends Component {
       <div>
         <div></div>
         <h1>Education</h1>
-        <button onClick={this.handleButtonClick}>ADD</button>
+        <button onClick={this.handleButtonClick}>REMOVE</button>
         {this.state.showComponent ? (
           <div>
-            <EducationInput lift={this.handleOnChange} />
+            <EducationInput lift={this.handleOnChange} app={this.props.app} />
           </div>
         ) : null}
       </div>

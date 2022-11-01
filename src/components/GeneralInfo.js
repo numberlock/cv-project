@@ -8,6 +8,7 @@ export default class GeneralInfo extends Component {
 
   handleOnChange(event) {
     this.props.lift(event.target.name, event.target.value);
+    this.setState({ G: event.target.value });
   }
 
   render() {
@@ -17,21 +18,25 @@ export default class GeneralInfo extends Component {
         <form>
           <input
             name="GeneralInfo name"
+            value={this.props.app.GeneralInfo.name}
             placeholder="First & Last name"
             onChange={this.handleOnChange}
           ></input>
           <input
             name="GeneralInfo phone"
+            value={this.props.app.GeneralInfo.phone}
             placeholder="Phone"
             onChange={this.handleOnChange}
           ></input>
           <input
             name="GeneralInfo email"
+            value={this.props.app.GeneralInfo.email}
             placeholder="Email"
             onChange={this.handleOnChange}
           ></input>
           <input
             name="GeneralInfo address"
+            value={this.props.app.GeneralInfo.address}
             placeholder="Address"
             onChange={this.handleOnChange}
           ></input>
